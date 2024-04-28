@@ -108,6 +108,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 
     <style>
     
@@ -118,19 +120,21 @@
 </head>
 
 <body>
-    <div class="header">
+    <div class="header" style="background-color: #9E9CFE;">
         <img src="img/icon.png" width="25px" height="25px" class="float-left logo-fav">
-        <h3 class="text-secondary font-weight-bold float-left logo">Dompet</h3>
-        <h3 class="text-secondary float-left logo2">- Qu</h3>
+        <h3 class="text font-weight-bold float-left logo">Financial</h3>
+        <!-- <h3 class="text-secondary font-weight-bold float-left logo">Financial</h3>
+        <h3 class="text-secondary float-left logo2">- Manage</h3> -->
+
         <a href="logout">
-            <div class="logout">
+        <div class="logout" style="color: black;">
                 <i class="fas fa-sign-out-alt float-right log"></i>
-                <p class="float-right logout">Logout</p>
+                <p class="float-right logout" style=" font-family: 'Poppins';">Logout</p>
             </div>
         </a>
     </div>
 
-    <div class="sidebar">
+    <div class="sidebar" style="background-color: #E8E8FF;">
         <nav>
             <ul>
                 <li class="rentang">
@@ -253,12 +257,12 @@
     <div class="main-content khusus">
         <div class="konten khusus2">
             <div class="konten_dalem khusus3">
-                <h2 class="heade" style="color: #4b4f58;">Dashboard</h2>
+                <h2 class="heade" style="color: #4b4f58; font-family: 'Poppins'; font-weight: 700;">Dashboard</h2>
                 <hr style="margin-top: -2px;">
                 <div class="container" id="container" style="border: none;">
-                    <div class="row tampilCardview" id="row">
+                    <div class="row tampilCardview" style="justify-content:center ;" id="row">
 
-                        <div class="col-md-4 jarak">
+                        <!-- <div class="col-md-4 jarak">
                             <div class="card card-stats card-warning" style="background: #347ab8;">
                                 <div class="card-body ">
                                     <div class="row">
@@ -276,11 +280,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <div class="col-md-4 jarak">
+                        <div class="col-md-5 jarak">
                             <a href="tambahPengeluaran" style="text-decoration: none;">
-                                <div class="card card-stats card-warning" style="background: #d95350;">
+                                <div class="card card-stats" style="background: #D95350;">
                                     <div class="card-body ">
                                         <div class="row">
                                             <div class="col-5">
@@ -328,9 +332,9 @@
                             </a>
                         </div>
 
-                        <div class="col-md-4 jarak">
+                        <div class="col-md-5 jarak">
                             <a href="tambahPemasukkan" style="text-decoration: none;">
-                                <div class="card card-stats card-warning" style="background: #5db85b;">
+                                <div class="card card-stats card-warning" style="background: #5DB85B;">
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-5">
@@ -379,7 +383,7 @@
                         </div>
                         <div class="rekening">
                             <div class="row tampil">
-                                <div class="col-lg-5 rek">
+                                <!-- <div class="col-lg-5 rek">
                                     <div class="konten-rekening border-right">
                                         <p>Saldo Rekening</p>
                                         <h3>Rp. <?= $saldoRekFix ?></h3>
@@ -405,9 +409,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-6 rek">
-                                    <canvas id="myChart" width="60px" height="30px"></canvas>
+                                </div> -->
+                                <div class="col-lg rek ">
+                                    <canvas id="myChart" width="60px" height="14px"></canvas>
                                 </div>
                             </div>
                         </div>

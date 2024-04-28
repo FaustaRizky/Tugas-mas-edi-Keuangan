@@ -82,8 +82,15 @@
     height: 45vh;
     margin: auto;
     margin-top: 30px;
-    background: rgba(251, 251, 251, 0.301);
-    border: .1px solid rgb(235, 234, 234);
+    /* background: rgba(251, 251, 251, 0.301); */
+    /* border: .1px solid rgb(235, 234, 234); */
+}
+
+@media (max-width: 800px) {
+    #myChart {
+        width: 70%; /* Atau ukuran spesifik lain sesuai kebutuhan */
+        height: 50px;
+    }
 }
 
 .konten-rekening {
