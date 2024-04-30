@@ -63,19 +63,21 @@
 </head>
 
 <body>
-	<div class="header">
-		<img src="img/icon.png" width="25px" height="25px" class="float-left logo-fav">
-		<h3 class="text-secondary font-weight-bold float-left logo">Dompet</h3>
-		<h3 class="text-secondary float-left logo2">- Qu</h3>
-		<a href="logout">
-			<div class="logout">
-					<i class="fas fa-sign-out-alt float-right log"></i>
-					<p class="float-right logout">Logout</p>
-			</div>
-		</a>
-	</div>
+<div class="header" style="background-color: #9E9CFE;">
+        <img src="img/icon.png" width="25px" height="25px" class="float-left logo-fav">
+        <h3 class="text font-weight-bold float-left logo">Financial</h3>
+        <!-- <h3 class="text-secondary font-weight-bold float-left logo">Financial</h3>
+        <h3 class="text-secondary float-left logo2">- Manage</h3> -->
 
-	<div class="sidebar">
+        <a href="logout">
+        <div class="logout" style="color: black;">
+                <i class="fas fa-sign-out-alt float-right log"></i>
+                <p class="float-right logout" style=" font-family: 'Poppins';">Logout</p>
+            </div>
+        </a>
+    </div>
+
+	<div class="sidebar" style="background-color: #E8E8FF;">
 		<nav>
 			<ul>
 					<li>
@@ -109,7 +111,34 @@
 							</div>
 						</li>
 					</a>
+					<!-- Input -->
+					<li class="klik2" id="flip2" style="cursor:pointer;">
+						<div>
+							<span class="fas fa-plus-circle"></span>
+							<span>Input Data</span>
+							<i class="fas fa-caret-right float-right" style="line-height: 20px;"></i>
+						</div>
+					</li>
 
+					<a href="tambahPemasukkan" class="linkAktif">
+						<li id="panel3" style="display: none;">
+							<div style="margin-left: 20px;">
+									<span><i class="fas fa-file-invoice-dollar"></i></span>
+									<span>Pemasukkan</span>
+							</div>
+						</li>
+					</a>
+
+					<a href="tambahPengeluaran" class="linkAktif">
+						<li id="panel4" style="display: none;">
+							<div style="margin-left: 20px;">
+									<span><i class="fas fa-hand-holding-usd"></i></span>
+									<span>Pengeluaran</span>
+							</div>
+						</li>
+					</a>
+					<!-- Input -->
+					
 					<!-- data -->
 					<li class="klik" id="flip" style="cursor:pointer;">
 						<div>
@@ -138,33 +167,6 @@
 					</a>
 					<!-- data -->
 
-					<!-- Input -->
-					<li class="klik2" id="flip2" style="cursor:pointer;">
-						<div>
-							<span class="fas fa-plus-circle"></span>
-							<span>Input Data</span>
-							<i class="fas fa-caret-right float-right" style="line-height: 20px;"></i>
-						</div>
-					</li>
-
-					<a href="tambahPemasukkan" class="linkAktif">
-						<li id="panel3" style="display: none;">
-							<div style="margin-left: 20px;">
-									<span><i class="fas fa-file-invoice-dollar"></i></span>
-									<span>Pemasukkan</span>
-							</div>
-						</li>
-					</a>
-
-					<a href="tambahPengeluaran" class="linkAktif">
-						<li id="panel4" style="display: none;">
-							<div style="margin-left: 20px;">
-									<span><i class="fas fa-hand-holding-usd"></i></span>
-									<span>Pengeluaran</span>
-							</div>
-						</li>
-					</a>
-					<!-- Input -->
 
 					<!-- laporan -->
 					<a href="laporan" style="text-decoration: none;">

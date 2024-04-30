@@ -60,19 +60,21 @@
 </head>
 
 <body>
-    <div class="header">
+<div class="header" style="background-color: #9E9CFE;">
         <img src="img/icon.png" width="25px" height="25px" class="float-left logo-fav">
-        <h3 class="text-secondary font-weight-bold float-left logo">Dompet</h3>
-        <h3 class="text-secondary float-left logo2">- Qu</h3>
+        <h3 class="text font-weight-bold float-left logo">Financial</h3>
+        <!-- <h3 class="text-secondary font-weight-bold float-left logo">Financial</h3>
+        <h3 class="text-secondary float-left logo2">- Manage</h3> -->
+
         <a href="logout">
-            <div class="logout">
+        <div class="logout" style="color: black;">
                 <i class="fas fa-sign-out-alt float-right log"></i>
-                <p class="float-right logout">Logout</p>
+                <p class="float-right logout" style=" font-family: 'Poppins';">Logout</p>
             </div>
         </a>
     </div>
 
-    <div class="sidebar">
+    <div class="sidebar" style="background-color: #E8E8FF;">
         <nav>
             <ul>
                 <li>
