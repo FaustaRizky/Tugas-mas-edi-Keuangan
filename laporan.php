@@ -1,35 +1,29 @@
-<?php 
-    session_start();
-    require "function/functions.php";
-    
-    // session dan cookie multilevel user
-    if(isset($_COOKIE['login'])) {
-        if ($_COOKIE['level'] == 'user') {
-            $_SESSION['login'] = true;
-            $ambilNama = $_COOKIE['login'];
-        } 
-        
-        elseif ($_COOKIE['level'] == 'admin') {
-            $_SESSION['login'] = true;
-            header('Location: administrator');
-        }
-    } 
+<?php
+session_start();
+require "function/functions.php";
 
-    elseif ($_SESSION['level'] == 'user') {
-        $ambilNama = $_SESSION['user'];
-    } 
-    
-    else {
-        if ($_SESSION['level'] == 'admin') {
-            header('Location: administrator');
-            exit;
-        }
+// session dan cookie multilevel user
+if (isset($_COOKIE['login'])) {
+    if ($_COOKIE['level'] == 'user') {
+        $_SESSION['login'] = true;
+        $ambilNama = $_COOKIE['login'];
+    } elseif ($_COOKIE['level'] == 'admin') {
+        $_SESSION['login'] = true;
+        header('Location: administrator');
     }
-
-    if(empty($_SESSION['login'])) {
-        header('Location: login');
+} elseif ($_SESSION['level'] == 'user') {
+    $ambilNama = $_SESSION['user'];
+} else {
+    if ($_SESSION['level'] == 'admin') {
+        header('Location: administrator');
         exit;
-    } 
+    }
+}
+
+if (empty($_SESSION['login'])) {
+    header('Location: login');
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -44,8 +38,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styler.css?v=1.0">
     <link rel="stylesheet" href="css/dashboard.css?v=1.0">
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -54,37 +47,31 @@
 </head>
 
 <body>
-    <div class="header">
+<div class="header" style="background-color: #9E9CFE;">
         <img src="img/icon.png" width="25px" height="25px" class="float-left logo-fav">
-        <h3 class="text-secondary font-weight-bold float-left logo">Dompet</h3>
-        <h3 class="text-secondary float-left logo2">- Qu</h3>
+        <h3 class="text font-weight-bold float-left logo">Financial</h3>
+        <!-- <h3 class="text-secondary font-weight-bold float-left logo">Financial</h3>
+        <h3 class="text-secondary float-left logo2">- Manage</h3> -->
+
         <a href="logout">
-            <div class="logout">
+        <div class="logout" style="color: black;">
                 <i class="fas fa-sign-out-alt float-right log"></i>
-                <p class="float-right logout">Logout</p>
+                <p class="float-right logout" style=" font-family: 'Poppins';">Logout</p>
             </div>
         </a>
     </div>
 
-    <div class="sidebar">
+    <div class="sidebar" style="background-color: #E8E8FF;">
         <nav>
             <ul>
-                <li>
-                    <img src="img/user.png" class="img-fluid profile float-left" width="60px">
-                    <h5 class="admin"><?= substr($ambilNama, 0, 7) ?></h5>
-                    <div class="online online2">
-                        <p class="float-right ontext">Online</p>
-                        <div class="on float-right"></div>
-                    </div>
-                </li>
                 <!-- fungsi slide -->
                 <script>
-                    $(document).ready(function () {
-                        $("#flip").click(function () {
+                    $(document).ready(function() {
+                        $("#flip").click(function() {
                             $("#panel").slideToggle("medium");
                             $("#panel2").slideToggle("medium");
                         });
-                        $("#flip2").click(function () {
+                        $("#flip2").click(function() {
                             $("#panel3").slideToggle("medium");
                             $("#panel4").slideToggle("medium");
                         });
@@ -168,13 +155,13 @@
 
                 <!-- change icon -->
                 <script>
-                    $(".klik").click(function () {
+                    $(".klik").click(function() {
                         $(this).find('i').toggleClass('fa-caret-up fa-caret-right');
                         if ($(".klik").not(this).find("i").hasClass("fa-caret-right")) {
                             $(".klik").not(this).find("i").toggleClass('fa-caret-up fa-caret-right');
                         }
                     });
-                    $(".klik2").click(function () {
+                    $(".klik2").click(function() {
                         $(this).find('i').toggleClass('fa-caret-up fa-caret-right');
                         if ($(".klik2").not(this).find("i").hasClass("fa-caret-right")) {
                             $(".klik2").not(this).find("i").toggleClass('fa-caret-up fa-caret-right');
@@ -192,30 +179,30 @@
                 <h2 class="heade" style="color: #4b4f58;">Laporan</h2>
                 <input type="hidden" id="username" value="<?= $ambilNama ?>">
                 <hr style="margin-top: -2px;">
-                
+
                 <div class="table-responsive">
                     <table class="laporan">
-                            <tr>
-                                <td>Jenis laporan</td>
-                                <td colspan="3">
-                                    <select id="jenis-laporan" class="form-control">
-                                        <option value="pemasukkan">Pemasukkan</option>
-                                        <option value="pengeluaran">Pengeluaran</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Pilih tanggal</td>
-                                <td><input type="date" id="awal" class="form-control control"></td>
-                                <td>sampai</td>
-                                <td><input type="date" id="akhir" class="form-control control"></td>
-                                <td><button class="btn btn-primary lapor">Tampilkan</button></td>
-                            </tr>
+                        <tr>
+                            <td>Jenis laporan</td>
+                            <td colspan="3">
+                                <select id="jenis-laporan" class="form-control">
+                                    <option value="pemasukkan">Pemasukkan</option>
+                                    <option value="pengeluaran">Pengeluaran</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pilih tanggal</td>
+                            <td><input type="date" id="awal" class="form-control control"></td>
+                            <td>sampai</td>
+                            <td><input type="date" id="akhir" class="form-control control"></td>
+                            <td><button class="btn btn-primary lapor">Tampilkan</button></td>
+                        </tr>
                     </table>
                 </div>
 
                 <div class="tampil"></div>
-                
+
             </div>
         </div>
     </div>

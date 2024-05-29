@@ -137,14 +137,6 @@
     <div class="sidebar" style="background-color: #E8E8FF;">
         <nav>
             <ul>
-                <li class="rentang">
-                    <img src="img/user.png" class="img-fluid profile float-left" width="60px">
-                    <h5 class="admin"><?= substr($ambilNama, 0, 7) ?></h5>
-                    <div class="online online2">
-                        <p class="float-right ontext">Online</p>
-                        <div class="on float-right"></div>
-                    </div>
-                </li>
                 <!-- fungsi slide -->
                 <script>
                     $(document).ready(function () {
