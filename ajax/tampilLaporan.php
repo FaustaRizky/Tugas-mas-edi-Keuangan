@@ -63,11 +63,6 @@
             <i class="far fa-file-excel"></i> save to excel
         </button>
     </form>
-    <form action="export/pdfPemasukkan.php?jenis=<?= $jenis ?>&awal=<?= $tanggalAwal ?>&akhir=<?= $tanggalAkhir ?>&username=<?= $username ?>" method="post">
-        <button type="submit" name="pdf" class="btn btn-danger export pdf" style="margin-top: -33px">
-            <i class="far fa-file-pdf"></i> save to PDF
-        </button>
-    </form>
     <!-- export -->
 
     <div class="row">
@@ -141,11 +136,6 @@
     <form action="export/excelPengeluaran.php?jenis=<?= $jenis ?>&awal=<?= $tanggalAwal ?>&akhir=<?= $tanggalAkhir ?>&username=<?= $username ?>" method="post">
         <button type="submit" name="excel" class="btn btn-success export float-left" style="margin-top: -20px">
             <i class="far fa-file-excel"></i> save to excel
-        </button>
-    </form>
-    <form action="export/pdfPengeluaran.php?jenis=<?= $jenis ?>&awal=<?= $tanggalAwal ?>&akhir=<?= $tanggalAkhir ?>&username=<?= $username ?>" method="post">
-        <button type="submit" name="pdf" class="btn btn-danger export pdf" style="margin-top: -33px">
-            <i class="far fa-file-pdf"></i> save to PDF
         </button>
     </form>
     <!-- export -->

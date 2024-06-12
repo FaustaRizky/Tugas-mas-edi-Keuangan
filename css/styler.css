@@ -165,7 +165,7 @@ td {
     max-width: 100%;
 }
 
-.headline {
+/* .headline {
     height: 35px;
     background: #f8f9fa;
     border: 1px solid rgb(238, 236, 236);
@@ -174,9 +174,8 @@ td {
 .headline h5 {
     font-size: 13pt;
     line-height: 35px;
-    margin-left: 15px;
     color: #4b4f58;
-}
+} */
 
 .row {
     margin-top: 10px;

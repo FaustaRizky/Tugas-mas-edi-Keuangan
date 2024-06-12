@@ -33,8 +33,8 @@ if (empty($_SESSION['login'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="img/icon.png">
-    <title>Dompet-Qu - Laporan</title>
+    <link rel="shortcut icon" href="img/vector.png">
+    <title>Financial - Laporan</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
@@ -44,12 +44,36 @@ if (empty($_SESSION['login'])) {
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/sweetalert.min.js"></script>
     <script src="js/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+
+     <style>
+        .main-content {
+            display: flex;
+        }
+        .konten_dalem {
+            width: 100%;
+        }
+        .table-responsive {
+            display: flex;
+        }
+        .laporan {
+            width: 100%;
+        }
+        .laporan td {
+            padding: 10px;
+        }
+        .lapor {
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
 </head>
 
 <body>
 <div class="header" style="background-color: #9E9CFE;">
-        <img src="img/icon.png" width="25px" height="25px" class="float-left logo-fav">
-        <h3 class="text font-weight-bold float-left logo">Financial</h3>
+        <img src="img/Vector.png" width="25px" height="25px" class="float-left logo-fav">
+        <h3 class="text font-weight-bold float-left logo" style=" font-family: 'Poppins';">Financial</h3>
         <!-- <h3 class="text-secondary font-weight-bold float-left logo">Financial</h3>
         <h3 class="text-secondary float-left logo2">- Manage</h3> -->
 
@@ -183,7 +207,7 @@ if (empty($_SESSION['login'])) {
                 <div class="table-responsive">
                     <table class="laporan">
                         <tr>
-                            <td>Jenis laporan</td>
+                            <td>Jenis Laporan: </td>
                             <td colspan="3">
                                 <select id="jenis-laporan" class="form-control">
                                     <option value="pemasukkan">Pemasukkan</option>
@@ -192,11 +216,21 @@ if (empty($_SESSION['login'])) {
                             </td>
                         </tr>
                         <tr>
-                            <td>Pilih tanggal</td>
+                            <td>Tanggal Awal :</td>
                             <td><input type="date" id="awal" class="form-control control"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
                             <td>sampai</td>
+                        </tr>
+                        <tr>
+                            <td>Tanggal Akhir :</td>
                             <td><input type="date" id="akhir" class="form-control control"></td>
-                            <td><button class="btn btn-primary lapor">Tampilkan</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <button class="btn lapor text-light px-4" style="background-color: #6357FB; padding: 3%;">Tampilkan</button>
+                            </td>
                         </tr>
                     </table>
                 </div>

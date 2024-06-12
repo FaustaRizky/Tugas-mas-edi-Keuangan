@@ -56,8 +56,8 @@ $today = $year . '-' . $month . '-' . $day;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="img/icon.png">
-    <title>Dompet-Qu - Tambah Data</title>
+    <link rel="shortcut icon" href="img/vector.png">
+    <title>Financial - Tambah Data</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
@@ -65,6 +65,8 @@ $today = $year . '-' . $month . '-' . $day;
     <link rel="stylesheet" href="css/styler.css?v=1.0">
     <link rel="stylesheet" href="css/tambah.css">
     <script src="js/jquery-3.3.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 
     <style>
         .wide-input {
@@ -99,9 +101,9 @@ $today = $year . '-' . $month . '-' . $day;
 </head>
 
 <body>
-    <div class="header" style="background-color: #9E9CFE;">
-        <img src="img/icon.png" width="25px" height="25px" class="float-left logo-fav">
-        <h3 class="text font-weight-bold float-left logo">Financial</h3>
+<div class="header" style="background-color: #9E9CFE;">
+        <img src="img/Vector.png" width="25px" height="25px" class="float-left logo-fav">
+        <h3 class="text font-weight-bold float-left logo" style=" font-family: 'Poppins';">Financial</h3>
         <!-- <h3 class="text-secondary font-weight-bold float-left logo">Financial</h3>
         <h3 class="text-secondary float-left logo2">- Manage</h3> -->
 
@@ -118,12 +120,12 @@ $today = $year . '-' . $month . '-' . $day;
             <ul>
                 <!-- fungsi slide -->
                 <script>
-                    $(document).ready(function() {
-                        $("#flip").click(function() {
+                    $(document).ready(function () {
+                        $("#flip").click(function () {
                             $("#panel").slideToggle("medium");
                             $("#panel2").slideToggle("medium");
                         });
-                        $("#flip2").click(function() {
+                        $("#flip2").click(function () {
                             $("#panel3").slideToggle("medium");
                             $("#panel4").slideToggle("medium");
                         });
@@ -196,7 +198,6 @@ $today = $year . '-' . $month . '-' . $day;
                 </a>
                 <!-- dashboard -->
 
-
                 <!-- laporan -->
                 <a href="laporan" style="text-decoration: none;">
                     <li>
@@ -209,13 +210,13 @@ $today = $year . '-' . $month . '-' . $day;
 
                 <!-- change icon -->
                 <script>
-                    $(".klik").click(function() {
+                    $(".klik").click(function () {
                         $(this).find('i').toggleClass('fa-caret-up fa-caret-right');
                         if ($(".klik").not(this).find("i").hasClass("fa-caret-right")) {
                             $(".klik").not(this).find("i").toggleClass('fa-caret-up fa-caret-right');
                         }
                     });
-                    $(".klik2").click(function() {
+                    $(".klik2").click(function () {
                         $(this).find('i').toggleClass('fa-caret-up fa-caret-right');
                         if ($(".klik2").not(this).find("i").hasClass("fa-caret-right")) {
                             $(".klik2").not(this).find("i").toggleClass('fa-caret-up fa-caret-right');
@@ -272,7 +273,7 @@ $today = $year . '-' . $month . '-' . $day;
                                 <tr>
                                     <td colspan="3" style="text-align: center;">
                                         <input type="hidden" name="username" value="<?= $ambilNama ?>">
-                                        <button class="btn btn-primary" type="submit" name="submit">Tambah Data</button>
+                                        <button class="btn text-light px-4" style="background-color: #6357FB; font-weight: 500; padding: 3%;" type="submit" name="submit">Tambah Data</button>
                                     </td>
                                 </tr>
                             </table>

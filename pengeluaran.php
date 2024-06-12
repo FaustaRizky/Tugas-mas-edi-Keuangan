@@ -47,8 +47,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="img/icon.png">
-    <title>Dompet-Qu - Pengeluaran</title>
+    <link rel="shortcut icon" href="img/Vector.png">
+    <title>Financial - Pengeluaran</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
@@ -57,12 +57,23 @@
     <link rel="stylesheet" href="css/styler.css?v=1.0">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
     <script src="js/jquery-3.3.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+		.header-color {
+
+			font-weight: 500;
+
+            text-align: center;
+            vertical-align: middle;
+		}
+	</style>
 </head>
 
 <body>
 <div class="header" style="background-color: #9E9CFE;">
-        <img src="img/icon.png" width="25px" height="25px" class="float-left logo-fav">
-        <h3 class="text font-weight-bold float-left logo">Financial</h3>
+        <img src="img/Vector.png" width="25px" height="25px" class="float-left logo-fav">
+        <h3 class="text font-weight-bold float-left logo" style=" font-family: 'Poppins';">Financial</h3>
         <!-- <h3 class="text-secondary font-weight-bold float-left logo">Financial</h3>
         <h3 class="text-secondary float-left logo2">- Manage</h3> -->
 
@@ -101,34 +112,6 @@
                     </li>
                 </a>
 
-                <!-- data -->
-                <li class="klik" id="flip" style="cursor:pointer;">
-                    <div>
-                        <span class="fas fa-database"></span>
-                        <span>Data Harian</span>
-                        <i class="fas fa-caret-up float-right" style="line-height: 20px;"></i>
-                    </div>
-                </li>
-
-                <a href="pemasukkan" class="linkAktif">
-                    <li id="panel">
-                        <div style="margin-left: 20px;">
-                            <span><i class="fas fa-file-invoice-dollar"></i></span>
-                            <span>Data Pemasukan</span>
-                        </div>
-                    </li>
-                </a>
-
-                <a href="pengeluaran" class="linkAktif">
-                    <li id="panel2" class="aktif" style="border-left: 5px solid #306bff;">
-                        <div style="margin-left: 20px;">
-                            <span><i class="fas fa-hand-holding-usd"></i></span>
-                            <span>Data Pengeluaran</span>
-                        </div>
-                    </li>
-                </a>
-                <!-- dashboard -->
-
                 <!-- Input -->
                 <li class="klik2" id="flip2" style="cursor:pointer;">
                     <div>
@@ -156,6 +139,34 @@
                     </li>
                 </a>
                 <!-- Input -->
+
+                <!-- data -->
+                <li class="klik" id="flip" style="cursor:pointer;">
+                    <div>
+                        <span class="fas fa-database"></span>
+                        <span>Data Harian</span>
+                        <i class="fas fa-caret-up float-right" style="line-height: 20px;"></i>
+                    </div>
+                </li>
+
+                <a href="pemasukkan" class="linkAktif">
+                    <li id="panel">
+                        <div style="margin-left: 20px;">
+                            <span><i class="fas fa-file-invoice-dollar"></i></span>
+                            <span>Data Pemasukan</span>
+                        </div>
+                    </li>
+                </a>
+
+                <a href="pengeluaran" class="linkAktif">
+                    <li id="panel2" class="aktif" style="border-left: 5px solid #306bff;">
+                        <div style="margin-left: 20px;">
+                            <span><i class="fas fa-hand-holding-usd"></i></span>
+                            <span>Data Pengeluaran</span>
+                        </div>
+                    </li>
+                </a>
+                <!-- dashboard -->
 
                 <!-- laporan -->
                 <a href="laporan" style="text-decoration: none;">
@@ -190,14 +201,14 @@
     <div class="main-content khusus">
         <div class="konten khusus2">
             <div class="konten_dalem khusus3">
-                <h2 class="head" style="color: #4b4f58;">Pengeluaran</h2>
+                <h4 class="head">Tambah Data Pengeluaran</h4>
                 <hr style="margin-top: -2px;">
 
                 <div class="row cari-filter">
                     <div class="col-lg-5">
                         <table class="tabel-data">
                             <tr>
-                                <td><label>Pilih tanggal</label></td>
+                                <td><label>Tanggal</label></td>
                                 <td style="width: 71%"><input type="date" value="<?= $today ?>" class="form-control filter" id="filter"></td>
                             </tr>
                         </table>
@@ -218,7 +229,7 @@
                 </div>
 
                 <div class="headline">
-                    <h5>Data Pengeluaran</h5>
+                    <h5 style="background-color: #B3B5FF; color: black; font-weight: 500; margin-left: 0px; padding-left: 4%;">Data Pengeluaran</h5>
                 </div>
                 <div class="container" id="container">
                     <div class="row tampil" id="row">
@@ -226,12 +237,12 @@
                             <div class="table-responsive">
                                 <table class="table table-sm table-hover table-striped table-bordered">
                                     <tr>
-                                        <th>No.</th>
-                                        <th>Tanggal</th>
-                                        <th>Keterangan Pengeluaran</th>
-                                        <th>Keperluan Pengeluaran</th>
-                                        <th>Jumlah Pengeluaran</th>
-                                        <th>Aksi</th>
+                                        <th class="header-color">No.</th>
+                                        <th class="header-color">Tanggal</th>
+                                        <th class="header-color">Keterangan</th>
+                                        <th class="header-color">Keperluan</th>
+                                        <th class="header-color">Jumlah</th>
+                                        <th class="header-color">Aksi</th>
                                     </tr>
 
                                     <?php $i = 1; ?>
@@ -262,7 +273,7 @@
 
                                     <?php if(isset($jumlah2) != null) :?>
                                     <tr>
-                                        <td colspan="4">Total Pengeluaran</td>
+                                        <td colspan="5">Total Pengeluaran</td>
                                         <td id="total" data-target="total">
                                         <?= $hasilJumlah ?>
                                         </td>
@@ -274,7 +285,7 @@
                     </div>
 
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary btn2" data-toggle="modal" data-target="#exampleModalCenter">
+                    <button type="button" class="btn text-light btn2" style="background-color: #6357FB; font-weight: 500;" data-toggle="modal" data-target="#exampleModalCenter">
                         <i class=" fas fa-hand-holding-usd"></i> Tambah Data
                     </button>
                 </div>

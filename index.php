@@ -53,7 +53,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Login | Dompet-Qu</title>
+  <title>Login | Financial</title>
   <link rel="shortcut icon" href="img/icon.png">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -103,12 +103,12 @@
                 <div class="login">
                   <h4>LOGIN</h4>
                 </div>
-                <div class="sub-title">Registrasi untuk gunakan Dompet - Qu</div>
+                <div class="sub-title">Registrasi untuk gunakan Financial</div>
               </div>
 
-              <div class="icon-user">
+              <!-- <div class="icon-user">
                 <h4 class="fa fa-user"> </h4>
-              </div>
+              </div> -->
               <div class="card-body">
                 <form method="POST">
                   <div class="input-group mb-3">
@@ -158,11 +158,11 @@
                 <div class="signup">
                   <h4>SIGN UP</h4>
                 </div>
-                <div class="sub-title">Login untuk gunakan Dompet - Qu</div>
+                <div class="sub-title">Login untuk gunakan Financial</div>
               </div>
-              <div class="icon-user">
+              <!-- <div class="icon-user">
                 <h4 class="fa fa-user"></h4>
-              </div>
+              </div> -->
 
               <div class="card-body">
                 <form method="POST">
